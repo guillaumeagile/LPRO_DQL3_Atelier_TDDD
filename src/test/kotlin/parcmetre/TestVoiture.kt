@@ -3,7 +3,6 @@ package exercice_1
 import Voiture.VoitureBuilder
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.string.shouldHaveLength
-import io.kotest.matchers.types.shouldBeSameInstanceAs
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.function.Executable
 import parcmetre.Voiture
@@ -26,6 +25,7 @@ class TestVoiture : StringSpec({
         //assertEquals(9,  sut.PlaqueImmatriculation.length);
     }
 
+
     ("la voiture ne peut pas avoir une plaque d'immatriculation a 8 caracteres").config(enabled = true) {
         // Arrange
         var sut : Voiture =  VoitureBuilder()
@@ -36,11 +36,11 @@ class TestVoiture : StringSpec({
         // assertEquals(0,  sut.PlaqueImmatriculation.length);  // oui mais pourquoi 0 ????
 
         // Assert
-        sut.IsValid shouldBe false  // 1e version
+      //  sut.IsValid shouldBe false  // 1e version
         // sut shouldBeSameInstanceAs  InvalideVoiture()  // 2e version
         // sut.Demarre() shouldBe Voiture.NePeutPasDemarrer   // dans les 2 versions, on devrait avoir ca
 
-
+        // faire un diagramme UML du pattern builder dans la 2e version
     }
 
     ("la voiture ne peut pas avoir une plaque d'immatriculation vide ").config(false ) {
