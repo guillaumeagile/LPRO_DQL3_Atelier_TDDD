@@ -1,7 +1,5 @@
 package Voiture
 
-import parcmetre.Voiture
-
 class VoitureBuilder {
 
         private lateinit var PlaqueImat: String

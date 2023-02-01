@@ -1,8 +1,12 @@
-package parcmetre
+package parcmetre.domain
 
 import java.time.LocalDateTime
 
-class Ticket(val dateEntree: LocalDateTime, val montantEnEuros: Int) {
+class Ticket( val  leTemps : Temps,  val montantEnEuros: Int) {
+    val dateEntree: LocalDateTime
+    init {
+        dateEntree = leTemps.now()
+    }
 
     val DateDeSortie: LocalDateTime =
         if (montantEnEuros <= 2)
