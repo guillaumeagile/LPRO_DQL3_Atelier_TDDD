@@ -2,7 +2,9 @@ package parcmetre
 
 import java.time.LocalDateTime
 
-class Ticket(immatriculation: String, sommePayee: Double, horlogeEntree: IHorloge) {
+class Ticket(val dateEntree: LocalDateTime, val montantEnEuros: Int) {
 
-    val DateHeureSortie: LocalDateTime = horlogeEntree.Maintenant().plusHours((sommePayee * 2).toLong())
+    val DateDeSortie: LocalDateTime =  dateEntree.plusHours ((montantEnEuros * 2).toLong())
+
+
 }
