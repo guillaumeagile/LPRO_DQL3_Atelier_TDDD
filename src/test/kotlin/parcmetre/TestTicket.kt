@@ -8,7 +8,7 @@ import java.time.Month
 
 class TestTicket : StringSpec({
 
-    ("le ticket doit donner une date de sortie correspondante aux heures choisies").config(enabled = true) {
+    ("le ticket doit donner une date de sortie correspondante pour un euros").config(enabled = true) {
         // Arrange
         var dateEntree = LocalDateTime.of(2023, Month.FEBRUARY, 1, 11, 21)
         var dateSortie = LocalDateTime.of(2023, Month.FEBRUARY, 1, 13, 21)
@@ -21,7 +21,7 @@ class TestTicket : StringSpec({
         ticket.DateDeSortie shouldBe dateSortie
     }
 
-    ("le ticket doit donner une date de sortie correspondante aux heures choisies").config(enabled = true) {
+    ("le ticket doit donner une date de sortie correspondante pour deux euros").config(enabled = true) {
         // Arrange
         var dateEntree = LocalDateTime.of(2023, Month.FEBRUARY, 1, 11, 21)
         var dateSortie = LocalDateTime.of(2023, Month.FEBRUARY, 1, 15, 21)
@@ -29,6 +29,32 @@ class TestTicket : StringSpec({
 
         // ACT
         var ticket = Ticket(dateEntree, montantPourDeuxHeures)
+
+        // Assert
+        ticket.DateDeSortie shouldBe dateSortie
+    }
+
+    ("le ticket doit donner une date de sortie correspondante pour cinq euros").config(enabled = true) {
+        // Arrange
+        var dateEntree = LocalDateTime.of(2023, Month.FEBRUARY, 1, 11, 21)
+        var dateSortie = LocalDateTime.of(2023, Month.FEBRUARY, 1, 16, 21)
+        var montantEnEuros = 5
+
+        // ACT
+        var ticket = Ticket(dateEntree, montantEnEuros)
+
+        // Assert
+        ticket.DateDeSortie shouldBe dateSortie
+    }
+
+    ("le ticket doit donner une date de sortie correspondante pour quatorze euros").config(enabled = true) {
+        // Arrange
+        var dateEntree = LocalDateTime.of(2023, Month.FEBRUARY, 1, 11, 0)
+        var dateSortie = LocalDateTime.of(2023, Month.FEBRUARY, 1, 19, 0)
+        var montantEnEuros = 14
+
+        // ACT
+        var ticket = Ticket(dateEntree, montantEnEuros)
 
         // Assert
         ticket.DateDeSortie shouldBe dateSortie
