@@ -18,11 +18,11 @@ class TestTicketAvecImprimante : StringSpec({
         var montantPourDeuxHeures = 1
         var ticket = Ticket(leTemps = FauxTemps(LocalDateTime.MIN), montantEnEuros = montantPourDeuxHeures)
 
-        var imprimanteDeTest : Imprimante = FausseImprimante(estBienImprimé = true)
-        /* val mok = mockk<Imprimante>()
-         every { mok.estBienImprimé} returns true
+        //var imprimanteDeTest : Imprimante = FausseImprimante(estBienImprimé = true)
+         val mok = mockk<Imprimante>()
+         every { mok.Imprime() } returns true
          var imprimanteDeTest = mok
-*/
+
         // ACT
        val estImprimé =  ticket.Imprime(imprimanteDeTest)
 

@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 
 class TestTemps : StringSpec({
 
-    ("le temps doit").config(enabled = true) {
+    ("le vrai temps doit toujours avancer").config(enabled = true) {
 
         VraiTemps().now() shouldNotBe VraiTemps().now()
     }
