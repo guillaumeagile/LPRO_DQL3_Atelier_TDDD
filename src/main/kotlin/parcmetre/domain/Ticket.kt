@@ -1,8 +1,13 @@
 package parcmetre.domain
 
+import parcmetre.Imprimante
 import java.time.LocalDateTime
 
-class Ticket( val  leTemps : Temps,  val montantEnEuros: Int) {
+class Ticket(val  leTemps : Temps, val montantEnEuros: Int) {
+    fun  Imprime(imprimante: Imprimante): Boolean{
+       return  imprimante.Imprime()
+    }
+
     val dateEntree: LocalDateTime
     init {
         dateEntree = leTemps.now()

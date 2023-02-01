@@ -2,12 +2,12 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.8.0'
 
     repositories {
-
         mavenCentral()
     }
+
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
@@ -33,11 +33,10 @@ repositories {
 }
 
 
-
 ext {
     slf4jVersion = '1.7.35'
     assertjVersion = "3.12.2"
-    kotestVersion = '5.1.0'
+    kotestVersion = '5.5.4'
 }
 
 dependencies {
@@ -53,6 +52,7 @@ dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testImplementation("io.mockk:mockk:1.13.4")
 
     testImplementation "io.kotest:kotest-runner-junit5:$kotestVersion"
     testImplementation "io.kotest:kotest-assertions-core:$kotestVersion"

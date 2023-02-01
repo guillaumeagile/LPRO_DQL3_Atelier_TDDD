@@ -2,7 +2,7 @@ package parcmetre
 
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
-import parcmetre.domain.Temps
+import parcmetre.domain.VraiTemps
 import parcmetre.domain.Ticket
 
 import java.time.LocalDateTime
@@ -15,7 +15,7 @@ class TestTicketAvecDateCourante : StringSpec({
         var montantPourDeuxHeures = 1
 
         // ACT
-        var ticket = Ticket(leTemps = Temps(), montantEnEuros = montantPourDeuxHeures)
+        var ticket = Ticket(leTemps = VraiTemps(), montantEnEuros = montantPourDeuxHeures)
 
         var dateSortie = ticket.dateEntree.plusHours(2)
         // Assert
@@ -29,7 +29,7 @@ class TestTicketAvecDateCourante : StringSpec({
         // ACT
             var ticket = Ticket(
                 montantEnEuros = montantPourDeuxHeures,
-                leTemps = Temps(LocalDateTime.of(2023, Month.FEBRUARY, 1, 8, 0)))
+                leTemps = FauxTemps(LocalDateTime.of(2023, Month.FEBRUARY, 1, 8, 0)))
 
         var dateSortie = LocalDateTime.of(2023, Month.FEBRUARY, 1, 10, 0)
         // Assert
