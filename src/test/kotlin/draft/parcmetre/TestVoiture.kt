@@ -5,7 +5,7 @@ import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.string.shouldHaveLength
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.function.Executable
-import parcmetre.Voiture
+import draft.Voiture
 
 class TestVoiture : StringSpec({
 

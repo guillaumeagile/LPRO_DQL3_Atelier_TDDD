@@ -1,5 +1,6 @@
-package parcmetre
+package draft.parcmetre
 
+import draft.IHorloge
 import java.time.LocalDateTime
 
 class FausseHorloge(val dateMaintenant: LocalDateTime) : IHorloge {

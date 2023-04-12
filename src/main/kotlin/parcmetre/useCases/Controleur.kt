@@ -1,6 +1,6 @@
 package parcmetre.useCases
 
-import parcmetre.Ticket
+import draft.Ticket
 
 
 class Controleur {

@@ -1,6 +1,6 @@
 package Voiture
 
-import parcmetre.Voiture
+import draft.Voiture
 
 class VoitureBuilder {
 

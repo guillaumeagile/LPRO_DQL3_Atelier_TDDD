@@ -1,6 +1,6 @@
 package parcmetre.useCases
 
-import parcmetre.IHorloge
+import draft.IHorloge
 import java.time.LocalDateTime
 
 class VraieHorloge : IHorloge {
