@@ -1,8 +1,7 @@
-
 ---
 published: false                        # Optional. Set to true to publish the workshop (default: false)
 type: workshop                          # Required.
-title: TDDD: Mob testing in an Hexagon             # Required. Full title of the workshop
+title: TDDD, Mob testing in an Hexagon             # Required. Full title of the workshop
 short_title: TDDD hands on     # Optional. Short title displayed in the header
 description: This is a workshop for...  # Required.
 level: intermediate                         # Required. Can be 'beginner', 'intermediate' or 'advanced'
