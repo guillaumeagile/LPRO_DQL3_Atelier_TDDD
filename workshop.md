@@ -43,3 +43,8 @@ Vous pourrez, par exemple, comparer en situation réaliste, l’usage d’un fak
  - En produisant (en TDD, toujours) un code emprunt de situations réelles : dialogue avec une base de données, un service web, une imprimante…
  - Apprendre en s’amusant, en collaborant afin de produire, tous ensemble, le code mettant en œuvre ces doublures de tests (Session Mob Programming). 
 
+## Prerequisites
+
+| | |
+|-------------------------|-------------------------|
+| Votre cerceau v.X.Y.Z   | 🧠                      |
