@@ -47,4 +47,4 @@ Vous pourrez, par exemple, comparer en situation réaliste, l’usage d’un fak
 
 | | |
 |-------------------------|-------------------------|
-| Votre cerceau v.X.Y.Z   | 🧠                      |
+| Votre cerveau v.X.Y.Z   | 🧠                      |
