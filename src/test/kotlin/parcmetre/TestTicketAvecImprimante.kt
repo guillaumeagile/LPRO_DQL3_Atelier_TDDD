@@ -4,6 +4,7 @@ import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.every
 import io.mockk.mockk
+import io.mockk.verify
 //import io.mockk.every
 //import io.mockk.mockk
 
@@ -19,15 +20,18 @@ class TestTicketAvecImprimante : StringSpec({
         var ticket = Ticket(leTemps = FauxTemps(LocalDateTime.MIN), montantEnEuros = montantPourDeuxHeures)
 
         //var imprimanteDeTest : Imprimante = FausseImprimante(estBienImprimé = true)
-         val mok = mockk<Imprimante>()
-         every { mok.Imprime() } returns true
-         var imprimanteDeTest = mok
+         val spy = mockk<Imprimante>()
+         every { spy.Imprime() } returns true
+         var imprimanteDeTest = spy
 
         // ACT
-       val estImprimé =  ticket.Imprime(imprimanteDeTest)
+       // val estImprimé =  ticket.Imprime(imprimanteDeTest)
+        // cas d'une API peut verbeuse (design souvent constaté, mais contesté) -> fonction malhonnête
+        ticket.Imprime2(imprimanteDeTest)
 
         // Assert
-     estImprimé shouldBe true
+        // estImprimé shouldBe true  // je ne peux pas le vérifier :(
+        verify {  spy.Imprime() }
 
     }
 

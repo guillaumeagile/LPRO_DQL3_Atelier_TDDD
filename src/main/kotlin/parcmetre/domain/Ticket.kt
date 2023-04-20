@@ -8,6 +8,10 @@ class Ticket(val  leTemps : Temps, val montantEnEuros: Int) {
        return  imprimante.Imprime()
     }
 
+    fun Imprime2(imprimante: Imprimante) {
+       // imprimante.Imprime()  // tester l'efficacité du SPY en commentant cette ligne
+    }
+
     val dateEntree: LocalDateTime
     init {
         dateEntree = leTemps.now()
