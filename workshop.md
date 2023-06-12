@@ -10,7 +10,7 @@ authors:                                # Required. You can add as many authors 
   - Anthnoy CASSAIGNE
 contacts:                               # Required. Must match the number of authors
   - guillaume.saintetienne@gmail.com / https://twitter.com/guillaume_agile
-  - anthony.cassaigne@gmail.com  / https://twitter.com/acassaigne
+  - anthony.cassaigne@gmail.com  / mastodon: @acassaigne@piaille.fr / http://acassaigne.info/
 duration_minutes: 180                    # Required. Estimated duration in minutes
 tags: dotnet, csharp, kotlin          # Required. Tags for filtering and searching
 #banner_url: assets/banner.jpg           # Optional. Should be a 1280x640px image
@@ -26,22 +26,22 @@ tags: dotnet, csharp, kotlin          # Required. Tags for filtering and searchi
 
 # TDDD, Mob testing in an Hexagon 
 
-"Vous vous posez des questions sur les doublures de tests ou ce qui est généralement et abusivement dénommé “mocks”.
-Venez dans cet atelier apprendre la terminologie précise et ce qu’ils sont : des bouchons, doublures, dummy, stubs, fake, spy et mock. Vous apprendrez également quand et pourquoi les utiliser.
-
-Vous pourrez, par exemple, comparer en situation réaliste, l’usage d’un fake versus un spy. Sur du code qui ressemble vraiment à celui que vous poussez en production. Et même découvrir les coulisses d’un stub ou spy en développant par vous même des doublures de tests au plus près de vos besoins. Sans passer par l’artillerie lourde! "
-
+Le TDD vous connaissez, nous on aime passionnément. 
+Cependant beaucoup de développeurs se disent, c'est beau mais ce n'est pas approprié pour notre base de code ! Oui, tout a fait il existe des parties de code plus difficile à tester que d'autres. 
+Rejoins nous dans l'exploration de l'architecture hexagonal épaulé par des techniques de doublures de tests. 
+[Pour ces parties de code (base de données, appel api, horloge...) difficile à tester en TDD ] 
+Tu repartiras alors avec des réponses concrètes et pragmatique, mieux tu participeras à la construction de dummy, stub, fake et spy... Ainsi ces termes et techniques n'aurons plus aucun secret pour toi. Oui nous parlerons également des mock... 
 
 ---
 
 ## Bénéfices attendus
- - Comprendre les tests unitaires et le besoin de doublures dans un début d’architecture hexagonale; clarifier ce que l’on appele doublure de tests.
+ - Comprendre les tests unitaires et le besoin de doublures dans un début d’architecture hexagonale; comprendre ce que l’on appele doublure de tests.
  - Introduire pas à pas les bases du DDD et de l'architecture Hexagonale
- - Envisager un cas métier réaliste (et utile???)
+ - Cet atelier se base sur un cas métier réel
  - Appréhender quand ces doublures de tests sont légitimes dans leurs usages.
- - Démystifier ce qu’est un spy, un fake, un mock.
- - En produisant (en TDD, toujours) un code emprunt de situations réelles : dialogue avec une base de données, un service web, une imprimante…
- - Apprendre en s’amusant, en collaborant afin de produire, tous ensemble, le code mettant en œuvre ces doublures de tests (Session Mob Programming). 
+ - Démystifier ce qu’est un dummy, un stub, un spy, un fake, un mock.
+ - En produisant (en TDD, toujours) un code emprunt de contraintes techniques réelles : dialogue avec une base de données, un service web, une imprimante…
+ - Apprendre en s’amusant, en collaborant afin de produire, tous ensemble, le code mettant en œuvre ces doublures de tests (Session Mob Programming au format Fish Bowl). 
 
 ## Prerequisites
 
