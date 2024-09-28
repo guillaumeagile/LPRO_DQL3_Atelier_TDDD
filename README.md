@@ -1,4 +1,5 @@
-# Atelier Doublures
+# Atelier Doublures dans une Architecture Hexagonale 
+# Workshop for test doubles in an Hexagonal Architecture
 
 ## Pitch 
 
